@@ -10,15 +10,18 @@ import { CarListComponent } from './car-list/car-list.component';
 import { MatButtonModule, MatCardModule, MatInputModule, MatListModule, MatToolbarModule, MatSelectModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarEditComponent } from './car-edit/car-edit.component';
-import { FormsModule, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { CarOwnersComponent } from './car-owners/car-owners.component';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { OwnersEditComponent } from './owners-edit/owners-edit.component';
 @NgModule({
   declarations: [
     AppComponent,
     CarListComponent,
     CarEditComponent,
-    CarOwnersComponent
+    CarOwnersComponent,
+    OwnersEditComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,9 @@ import {MatDividerModule} from '@angular/material/divider';
     MatToolbarModule,
     FormsModule,
     MatSelectModule,
-    MatDividerModule
+    MatDividerModule,
+    MatCheckboxModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
